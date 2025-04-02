@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom properties</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .web{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="wdm">learn js dom properties
+        <span>wdm</span>
+        <li>suman 2</li>
+
+    </h1>
+    <script>
+        let element = document.querySelector('h1');
+        // console.log(element)
+        // console.log('text content=', element.textContent)
+        // console.log('inner html= ', element.innerHTML)
+        // console.log('inner html= ', element.innerText)
+        // // console.log('style', element.style)
+        // console.log('class ka naame', element.className)
+
+        // element.style.color='black'
+        // element.style.backgroundColor='yellow'
+        element.textContent='mohan'
+        console.log('class name before',element.className)
+
+        // element.className='web'
+        console.log('class name after',element.className)
+
+    </script>
+</body>
+
+</html> -->
+
+
+
+<!--************dom element properties***************** -->
+<!-- 
+id – Returns/sets the ID of the element.
+
+className – Returns/sets the class attribute as a string.
+
+classList – Returns a list of classes applied to the element.
+
+tagName – Returns the tag name of the element (e.g., DIV, P).
+
+innerHTML – Gets or sets the HTML content inside an element.
+
+outerHTML – Gets or sets the entire HTML of the element including itself.
+
+innerText – Gets or sets only the text content inside an element.
+
+textContent – Similar to innerText, but includes hidden elements' text.
+
+style – Gets or sets the inline CSS styles of the element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Properties Demo</title>
+    <style>
+        .highlight { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="demo" class="box highlight">Hello, <b>World</b>!</div>
+    <button onclick="showProperties()">Show Properties</button>
+    <script>
+        function showProperties() {
+            let element = document.getElementById("demo");
+            
+            console.log("ID:", element.id);
+            console.log("Class Name:", element.className);
+            console.log("Class List:", element.classList);
+            console.log("Tag Name:", element.tagName);
+            console.log("Inner HTML:", element.innerHTML);
+            console.log("Outer HTML:", element.outerHTML);
+            console.log("Inner Text:", element.innerText);
+            console.log("Text Content:", element.textContent);
+            console.log("Style Color:", element.style.color);
+        }
+    </script>
+</body>
+</html>

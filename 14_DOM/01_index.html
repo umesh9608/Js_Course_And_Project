@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">We are Learning Dom</h1>
+    <div class="h1">we are learning dom accessing</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, provident.</p>
+    <p>Lorem uam pariatur maiores magnam, vel unde veritatis, sinitis quisquam eaque non!</p>
+
+    <p class="para" id="pa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, maxime!</p>
+    <script>
+        // Use When: You want to select a single unique element by its id.
+        let el1 = document.getElementById('h1')
+
+
+        //Use When: You want to select all elements of a specific tag (e.g., all <h1> tags).
+        //Returns: An HTMLCollection (like an array but not exactly) of all matching elements.
+        let el2 = document.getElementsByTagName('h1')
+
+
+        //Use When: You want to select all elements that have a specific class.
+        //Returns: An HTMLCollection of matching elements.
+        let el3 = document.getElementsByClassName('h1')
+
+        // console.log(el1)
+        // console.log(el2)
+        // console.log(el3)
+
+
+        // ******************querySelector**************
+        //Selecting an Element by ID    let element = document.querySelector("#myId");
+        // Selecting an Element by Class  let element = document.querySelector(".myClass");
+        //Selecting an Element by Tag Name let element = document.querySelector("p"); // Selects the first `<p>` element
+        // Selecting Nested Elements  let element = document.querySelector(".container .child");
+        // Selecting an Input Field   let inputField = document.querySelector("input[type='text']");
+
+
+
+        //The document.querySelector('p') method selects the first <p> element it finds in the document.
+        // let element = document.querySelector('p')
+        // console.log('access single tag',element)
+
+        // let elements = document.querySelectorAll('p')
+        // console.log('access multiple  tag',element)
+
+
+
+        // Selects the first element with class "para"
+        let element = document.querySelector('.para');
+        console.log(element);
+
+        // Selects all elements with class "para" (if needed)
+        let elements = document.querySelectorAll('.para');
+        console.log(elements);
+
+        // Selects an element by its ID "pa"
+        let elementById = document.querySelector('#pa');
+        console.log(elementById);
+
+    </script>
+</body>
+
+</html>

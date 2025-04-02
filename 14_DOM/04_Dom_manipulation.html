@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manipulation</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dom Manipulation</h1>
+
+    </div>
+
+    <script>
+        // create new element
+        let h2 = document.createElement('h2') //use li,p,h1,h2,h3,....
+
+
+        // {
+        //     h2.innerText = 'This is inner text of h2'
+        //     h2.setAttribute('class', 'test')
+        //     h2.setAttribute('id', 'testing')
+        //     console.log(h2, h2.getAttribute('class'))
+        //     h2.removeAttribute('class')
+        //     console.log(h2)
+        // }
+
+        
+
+        h2.innerText = 'This is brand  new h2'
+        let container = document.querySelector('.container')
+        // container.append(h2) //adds at the end of the node(inside)
+        // container.prepend(h2) //adds at the start of node(inside)
+        // container.before(h2)  //adds after the node (outside)
+        // container.after(h2)  //adds after the node(outside)
+        // container.remove(h2) //remove the node
+    </script>
+
+</body>
+
+</html>

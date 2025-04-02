@@ -1,0 +1,128 @@
+<!--  type of events 
+  an events is an action or occurrence that happens in the browser, usually as a result of the user interaction or the browser's system processes
+  . mouse events:(click, dblclick,mouseover,mouseout
+  . keyboard events: (keypress, keyup,keydown)
+  . form events: (submit,shange,focus)
+  . window events: (load, resize, scroll))-->
+
+<!-- ways to assign event handlers:-
+   .1  html attribute
+       <button onclick="handleClick()">Click me </button>
+       
+    .2  inline js
+         document.getElementById("mubutton").onclick = handleClick;-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        div {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            margin: 100px;
+
+        }
+    </style>
+</head>
+<h1>We are learning event right now</h1>
+<!--  "Inline Event Handling."
+                    🚫 Why is Inline Event Handling Not Recommended?
+                  ❌ Messy Code: Mixing HTML with JavaScript makes it harder to read.
+                  ❌ Hard to Maintain: If you need to update an event, you must modify the HTML.
+                  ❌ Limited Control: You cannot add multiple event handlers to the same element. -->
+<button onclick="chnageOTDark()">Change to dark
+    mode</button><!-- this method is not recommanded  (use event listeners)-->
+<button onmouseover="changeToLight()">Changeto light mode</button>
+<div onmouseover="bgChnage()" onmouseleave="bgChnage2()">
+    this is div
+</div>
+
+<script>
+    let chnageOTDark = () => {
+        document.body.style.backgroundColor = 'black'
+        document.body.style.color = 'white'
+
+    }
+
+    let changeToLight = () => {
+        document.body.style.backgroundColor = 'white'
+        document.body.style.color = 'black'
+    }
+
+    let bgChnage = () => {
+        let div = document.querySelector('div')
+        div.style.backgroundColor = 'yellow'
+    }
+
+    let bgChnage2 = () => {
+        let div = document.querySelector('div')
+        div.style.backgroundColor = 'blue'
+    }
+
+</script>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Events Listner:-
+      an event listener is a method that listens for a specific event to phappen on a oarticular element
+      syntax: element.addEventListner("event", eventHandler)
+      . element: the DOM element you want to attach the listener to
+      . event: type of event(eg. click,submit,keydown)
+      . eventHandler: funtion to be executed when the event occurs-->
+    <h1>We are learning event right now</h1>
+    <button id="darkBtn">Change to dark mode</button>
+    <button id="lightBtn">Change to light mode</button>
+    <div id="myDiv">This is div</div>
+
+    <script>
+        // Selecting elements
+        let darkBtn = document.getElementById('darkBtn');
+        let lightBtn = document.getElementById('lightBtn');
+        let div = document.getElementById('myDiv');
+
+        // Adding event listeners
+        darkBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'white';
+        });
+
+        lightBtn.addEventListener('mouseover', () => {
+            document.body.style.backgroundColor = 'white';
+            document.body.style.color = 'black';
+        });
+
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = 'yellow';
+        });
+
+        div.addEventListener('mouseleave', () => {
+            div.style.backgroundColor = 'blue';
+        });
+    </script>
+</body>
+
+</html>

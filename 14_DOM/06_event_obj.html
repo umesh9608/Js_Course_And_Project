@@ -1,0 +1,29 @@
+<!-- 📌 Event Object (event or e) in JavaScript
+The event object is automatically passed to an event handler when an event occurs. It contains details about the event, such as:
+
+Event type (e.g., click, mouseover)
+
+Target element (which element triggered the event)
+
+Mouse position, key pressed, and more -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object </title>
+</head>
+<body>
+    <h2>learn event object like(e.target/e.type)</h2>
+    <button id="btn">Click Me</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function(event) {
+            console.log("Event Type:", event.type);  // Logs the event type (click)
+            console.log("Target Element:", event.target);  // Logs the button element
+            console.log("Mouse X Position:", event.clientX);  // X-coordinate of the click
+            console.log("Mouse Y Position:", event.clientY);  // Y-coordinate of the click
+        });
+    </script>
+</body>
+</html>

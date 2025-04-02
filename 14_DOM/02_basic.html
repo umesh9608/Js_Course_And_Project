@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing HTML Elements in JavaScript</title>
+</head>
+<body>
+
+    <!-- Example for getElementById -->
+    <p id="myId">This is a paragraph with an ID.</p>
+
+    <!-- Example for getElementsByClassName -->
+    <p class="myClass">First paragraph</p>
+    <p class="myClass">Second paragraph</p>
+
+    <!-- Example for getElementsByTagName -->
+    <h1>Heading 1</h1>
+    <h1>Heading 2</h1>
+
+    <!-- Example for querySelector -->
+    <div>First div</div>
+    <div>Second div</div>
+
+    <script>
+        // getElementById
+        let elementById = document.getElementById("myId");
+        console.log("getElementById:", elementById);
+
+        // getElementsByClassName
+        let elementsByClass = document.getElementsByClassName("myClass");
+        console.log("getElementsByClassName:", elementsByClass);
+
+        // getElementsByTagName
+        let elementsByTag = document.getElementsByTagName("h1");
+        console.log("getElementsByTagName:", elementsByTag);
+
+        // querySelector (first matching element)
+        let firstDiv = document.querySelector("div");
+        console.log("querySelector (first div):", firstDiv);
+
+        // querySelectorAll (all matching elements)
+        let allDivs = document.querySelectorAll("div");
+        console.log("querySelectorAll (all divs):", allDivs);
+    </script>
+
+</body>
+</html>
