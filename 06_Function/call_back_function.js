@@ -1,5 +1,21 @@
 //Callback  function is a function that you pass as an argument to anoter function. it gets executed after a cretain task is completed
 
+// best example 
+
+function orderFood(callback) {
+    console.log(" Order placed at the restaurant.");
+    callback(); // Calling the callback function
+}
+
+function serveFood() {
+    console.log(" Food is served!");
+}
+
+// Calling the function with a callback
+orderFood(serveFood);
+
+
+
 // const print = ()=>{
 //     console.log("printing press")
 // }
@@ -23,7 +39,7 @@ Imagine you order a pizza  from a restaurant. You tell them:
 
 Here, you are giving your phone number (callback function) to the restaurant (another function). When the pizza is ready, they will call you back!*/
 function makePizza(callback) {
-    console.log("Making pizza... 🍕");
+    console.log("Making pizza... ");
     setTimeout(() => {
         console.log("Pizza is ready! 🎉");
         callback(); // Calling the callback function
@@ -31,7 +47,7 @@ function makePizza(callback) {
 }
 
 function eatPizza() {
-    console.log("Eating the pizza! 😋");
+    console.log("Eating the pizza! ");
 }
 
 makePizza(eatPizza); // Passing eatPizza as a callback

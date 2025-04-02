@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emage Changer</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .image-container img{
+            height: 300px;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+        .image-container h2{
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid blue;
+            width: 150px; /* Fixed width */
+            height: 50px; /* Fixed height */
+            display: flex; /* To center the text */
+            align-items: center; /* Vertical centering */
+            justify-content: center; 
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Image Changer</h1>
+    <div class="image-container">
+        <img src="https://media.istockphoto.com/id/475606798/photo/the-palace-of-westminster-in-london-in-the-evening.jpg?s=612x612&w=is&k=20&c=eCBfsTd2QbyyvW_0R8IwgdkyhAmSh30qUFCgckgU6wY=" alt="">
+        <h2>London</h2>
+    </div>
+
+    <script>
+        let img = document.querySelector('img');
+        let h2 = document.querySelector('h2')
+        let prevSrc = img.src
+        let prevText = h2.innerText
+
+        img.addEventListener('mouseover',()=>{
+            img.src='https://media.istockphoto.com/id/2151954540/photo/view-of-paris-with-eiffel-tower.jpg?s=612x612&w=is&k=20&c=P0OOeVPYeF2IMPPmbf2xDoE6cvBvL6NC-pej3LX1DDs='
+
+            h2.innerText ='Paris'
+            img.style.border= '2px solid yellow'
+        })
+
+        img.addEventListener('mouseleave',()=>{
+            img.src = prevSrc
+            h2.innerText = prevText
+            img.style.border= '2px solid blue'
+
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+js code wrtie three location and learn
+1. in js write crome console
+2. install nodejs and write any code editor like vs code , notpad etc and run terminal
+3. use html and attech js code
+
+
+
+
+
+
+
+
+
