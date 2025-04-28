@@ -1,0 +1,51 @@
+Promices in Javascript:
+                       A Promices in Javascript is an object representing the eventual result (success/failure) of an asynchronous operation
+
+                       States of a Promice:
+                                 . Pending: Initial state, operation hasn't competed.
+                                 . Fulfilled: Operation successded, giving a resolved value.
+                                 . Rejected: Operation failed, providing a reason(error)
+
+
+                                 exe: 
+                                      let promise = new Promice((resolve, Reject)=>{
+                                        //async code
+                                        if(success)resolve("Resolved data"); //Fulfilled
+                                        else reject("Error message"); //Rejected
+                                      });
+
+
+Handle Promices Results:-
+    
+    .  .then() for Fulfilled Promices:
+       .then() runs if the promise is Fulfilled
+    
+    . Syntax: promise.then(result => { /*code*/})
+    .  .catch() for Rejected Promices:
+       .catch() runs if the promise is Rejected
+
+    . Syntax: promise.catch(error=>{/*code*/})   
+
+******************************************************************
+async:
+    Used to define a function that runs asynchronously and automatically return a promise. Allows the function to use await for handling promise more cleanly
+
+await: 
+    Pauses execution inside an async function unitl a promise resolves, then returns the resolved value. Makes asynchronous code look synchronous for better readability.    
+
+
+    example(create api then use)
+
+       async function fatchData(){
+        try{
+            const response = await fatch("https://api.example.com/data");
+            if(!response.ok){
+                throw new Error("Network response was not ok");
+            }
+
+            const data = await response.json(); //wait for JSON parsing
+            console.log(data); //use the fatched data
+        }catch(error){
+            console.error("There was a problem wait the fetch operation: ", error);
+        }
+       }
