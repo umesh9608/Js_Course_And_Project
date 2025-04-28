@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Project</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Project using BOM</h1>
+
+
+    <script>
+        let option = prompt("Select operaion: \n 1. Basic Arithmetic (+, -, *, /)\n2. Currency Convertion(Dolar to Rupee pr Rupee to Dollar)\n3. Weight Convertion(Kg to Gram)\n4. Temprature Convertion(Celecious to Faherenheigt)\n Enter choice(1/2/3/4):")
+
+        switch (option) {
+            case '1':
+                let num1 = parseFloat(prompt("Enter the first number"))
+                let num2 = parseFloat(prompt("Enter the second number"))
+                let operation = prompt("Enter the operation (+, -, *, /)");
+
+                let result;
+
+                if (operation === '+') result = num1 + num2;
+                else if (operation === '-') result = num1 - num2;
+                else if (operation === '*') result = num1 * num2;
+                else if (operation === '/') result = num1 / num2;
+                else alert("Invalid operation");
+
+                alert("Result: " + result)
+                break;
+
+            case '2':
+                let CurrencyChoice = prompt("Enter '1 to convert dollar to Ruppes or '2' to convert Ruppes to Dollar")
+
+                let amount = parseFloat(prompt("Enter the amount: "));
+
+                let exchangeRate = 82.5; // Example exchange rate
+
+                if (CurrencyChoice === '1') {
+                    let result = amount * exchangeRate;
+                    alert("Converted amount in Ruppes: " + result);
+                } else if (CurrencyChoice === '2') {
+                    let result = amount / exchangeRate;
+                    alert("Converted amount in Dollar: " + result);
+                } else {
+                    alert("Invalid choice")
+                }
+                break;
+
+            case '3':
+                let kg = parseFloat(prompt("Enter weight in kg: "));
+                alert("Result: " + (kg * 1000) + " gram")
+                break;
+
+            case '4':
+                let cs = parseFloat(prompt("Enter temperature in Celsius: "));
+                let fh = (cs * 9 / 5) + 32;
+                alert("Temperature in Fahrenheit: " + fh);
+                break;
+        }
+    </script>
+</body>
+
+</html>
