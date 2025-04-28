@@ -1,0 +1,27 @@
+BOM in js:-
+the BOM(Browser Object Model) ia a collection of Object that allow javascript to interact with the Browser
+
+BOM Components:  
+               . Windows Object
+               . Lection Object 
+               . Alert,Prompt,Confirm
+
+Windows Object & Methods:
+
+.     Window.open():open a new tab/Window    //try in console  Window.open('https://googole.com)
+.     Window.close(): close the current Window   //Window.close()
+.     Window.scrollTo():scroll the Window to a position
+.     Window.setTimeout(): Delays code execution
+.     Window.setInterval(): Repeats code at inteval
+
+. location.href: Gets or sets the current URL
+. location.reload():Reloads the page
+. location.assign(): Loads a new URL
+. location.replace(): Replaces the current page
+. location.pathname: Gets the URL path
+
+Alert,Prompt.Confirm
+
+. alert(): Shows a message box
+. prompt() : Asks for user input
+. confirm(): Asks for confirm (Ok/Cancel).
